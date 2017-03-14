@@ -10,7 +10,7 @@ function press(){
     //get company
     company = $('textarea')[i].placeholder.split("  ")[0].split(" ").splice(6).join(" ").replace(".","")
     //coverletter text
-    jobs[i].children[1].children[0].children[0].children[0].children[1].children[0].children[3].children[0].value = `Hi ${name},
+    $('textarea')[i].value = `Hi ${name},
 While earning my degree in applied physics I was employed as a project manager. It was my job to develop processes to transfer the manual process of prosthetic development into an automated one through precise scanning, modifying, and machining. After undertaking numerous challenges, and accomplishing extreme strides for the company, I decided after I earn my degree to explore new endeavors.
 I’m an analyzer, a problem solver, and a thinker. I have a passion for numbers, an instinct for trends, and the diligence to keep my work perfect. I can’t wait to take on new challenges and hope I get a chance to at ${company}. Please reach out to me if you have any questions. Thank you so much for your time.
  
@@ -19,7 +19,8 @@ David Korff`
    }
   else if (event.key==='Enter'){
     //send letter
-        jobs[i].children[1].children[0].children[0].children[0].children[1].children[0].children[3].children[2].click()
+    $('.g-button.blue.interested-with-note-button')[0].click()
+        // jobs[i].children[1].children[0].children[0].children[0].children[1].children[0].children[3].children[2].click()
         i++
   }
   else if(event.key===','){
