@@ -12,11 +12,11 @@ i=0
 document.addEventListener("keypress", press)
 
 function press(){
-  if (event.key==='q'){
+  if (event.key==='.'){
     //find open the tab
-    jobs[i].click()
-  }
-  else if (event.key==='w'){
+    //jobs[i].click()
+
+  // else if (event.key==='Space'){
     //fill out cover letter
 
     //open cover letter field
@@ -36,15 +36,15 @@ I’m an analyzer, a problem solver, and a thinker. I have a passion for numbers
 Sincerely,
 David Korff`
 
-  }
-  else if (event.key==='e'){
+   }
+  else if (event.key==='Enter'){
     //send letter
         jobs[i].children[1].children[0].children[0].children[0].children[1].children[0].children[3].children[2].click()
 
         //incriment i
         i++
   }
-  else if(event.key==='p'){
+  else if(event.key===','){
     jobs[i].children[1].children[0].children[0].children[0].children[1].children[0].children[1].children[3].click()
     i++
   }
