@@ -1,5 +1,6 @@
 jobs = document.getElementsByClassName("djl87 job_listings fbw9 browse_startups_table_row _a _jm")
 i=0
+a=0
 document.addEventListener("keypress", press)
 function press(){
   if (event.key==='.'){
@@ -19,13 +20,21 @@ David Korff`
    }
   else if (event.key==='Enter'){
     //send letter
-    $('.g-button.blue.interested-with-note-button')[0].click()
+    $('.g-button.blue.interested-with-note-button')[a].click()
         // jobs[i].children[1].children[0].children[0].children[0].children[1].children[0].children[3].children[2].click()
         i++
+        jobs[i].style.background='#00FFFF'
+
   }
   else if(event.key===','){
     //reject company
     jobs[i].children[1].children[0].children[0].children[0].children[1].children[0].children[1].children[3].click()
     i++
+    a++
+    jobs[i].style.background='#00FFFF'
+
+  }
+  else if(event.key==='m'){
+    jobs[i].click()
   }
 }
