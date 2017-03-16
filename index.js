@@ -3,13 +3,16 @@ i=0
 a=0
 document.addEventListener("keypress", press)
 function press(){
-  if (event.key==='.'){
+  if(event.key==='m'){
+    jobs[i].click()
+  }
+  else if (event.key==='.'){
     //open cover letter field
     jobs[i].children[1].children[0].children[0].children[0].children[1].children[0].children[1].children[1].children[0].click()
     //get name
-    name = $('textarea')[i].placeholder.split(" ")[4]
+    let name = $('textarea')[i].placeholder.split(" ")[4]
     //get company
-    company = $('textarea')[i].placeholder.split("  ")[0].split(" ").splice(6).join(" ").replace(".","")
+    let company = $('textarea')[i].placeholder.split("  ")[0].split(" ").splice(6).join(" ").replace(".","")
     //coverletter text
     $('textarea')[i].value = `Hi ${name},
 While earning my degree in applied physics I was employed as a project manager. It was my job to develop processes to transfer the manual process of prosthetic development into an automated one through precise scanning, modifying, and machining. After undertaking numerous challenges, and accomplishing extreme strides for the company, I decided after I earn my degree to explore new endeavors.
@@ -33,8 +36,5 @@ David Korff`
     a++
     jobs[i].style.background='#00FFFF'
 
-  }
-  else if(event.key==='m'){
-    jobs[i].click()
   }
 }
